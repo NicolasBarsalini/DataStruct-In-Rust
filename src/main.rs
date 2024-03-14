@@ -11,9 +11,9 @@ fn main() {
     let str = String::from("Nicolas");
 
     if is_palindrome(&str) {
-        println!("A palavra {str} é palindroma!");
+        println!("the word {str} is a palindrome!");
     } else {
-        println!("A palavra {str} não é palindroma!")
+        println!("The word {str} is not a palindrome!")
     }
     
 }
@@ -73,7 +73,7 @@ impl<T> Stack<T> {
             return None
         }
 
-        let removed_node = self.top.take(); //pegamos o valor do top
+        let removed_node: Option<Box<Node<T>>> = self.top.take(); //pegamos o valor do top
 
         match removed_node {
             Some(node) => {
